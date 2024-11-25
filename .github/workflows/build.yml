@@ -34,18 +34,18 @@ jobs:
           axel -n 8 https://github.com/AppImage/AppImageKit/releases/download/13/appimagetool-x86_64.AppImage
           chmod +x appimagetool-x86_64.AppImage
       - name: Download built jars
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: built-jars
           path: target/lib/
       - name: Download REQ_MODULES
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: req_modules
       - name: Download VERSION
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: version
@@ -136,18 +136,18 @@ jobs:
           axel -n 8 https://github.com/AppImage/AppImageKit/releases/download/13/appimagetool-i686.AppImage
           chmod +x appimagetool-i686.AppImage
       - name: Download built jars
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: built-jars
           path: target/lib/
       - name: Download REQ_MODULES
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: req_modules
       - name: Download VERSION
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: version
@@ -245,18 +245,18 @@ jobs:
           cd /tmp/graalvm-ce-java17-22.0.0.2/bin
           ./gu install native-image
       - name: Download built jars
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: built-jars
           path: target/lib/
       - name: Download REQ_MODULES
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: req_modules
       - name: Download VERSION
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: version
@@ -311,18 +311,18 @@ jobs:
           wget -P /tmp https://download2.gluonhq.com/openjfx/18/openjfx-18-ea+11_osx-x64_bin-jmods.zip
           unzip /tmp/openjfx-18-ea+11_osx-x64_bin-jmods.zip -d /tmp
       - name: Download built jars
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: built-jars
           path: target/lib/
       - name: Download REQ_MODULES
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: req_modules
       - name: Download VERSION
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: version
@@ -364,12 +364,12 @@ jobs:
           distribution: temurin
           architecture: x64
       - name: Download REQ_MODULES
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: req_modules
       - name: Download VERSION
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: version
@@ -378,7 +378,7 @@ jobs:
           curl.exe -o D:\openjfx-18-ea+11_windows-x64_bin-jmods.zip https://download2.gluonhq.com/openjfx/18/openjfx-18-ea+11_windows-x64_bin-jmods.zip
           Expand-Archive -Force D:\openjfx-18-ea+11_windows-x64_bin-jmods.zip D:\
       - name: Download built jars
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: built-jars
@@ -405,7 +405,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2.1.0
       - name: Download VERSION
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: version
@@ -413,7 +413,7 @@ jobs:
         run: |
           echo "VERSION=$(<version.txt)" >> $GITHUB_ENV
       - name: Download built jars
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: built-jars
@@ -514,18 +514,18 @@ jobs:
           cd /tmp/graalvm-ce-java17-22.0.0.2/bin
           ./gu install native-image
       - name: Download built jars
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: built-jars
           path: target/lib/
       - name: Download REQ_MODULES
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: req_modules
       - name: Download VERSION
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: version
@@ -570,7 +570,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2.1.0
       - name: Download VERSION
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: version
@@ -578,7 +578,7 @@ jobs:
         run: |
           echo "VERSION=$(<version.txt)" >> $GITHUB_ENV
       - name: Download built jars
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: init.yml
           name: built-jars
